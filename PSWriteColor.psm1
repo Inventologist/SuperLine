@@ -1,4 +1,4 @@
-#Get public and private function definition files.
+ine#Get public and private function definition files.
 $Public = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue -Recurse )
 $Private = @( Get-ChildItem -Path $PSScriptRoot\Private\*.ps1 -ErrorAction SilentlyContinue -Recurse )
 $Assembly = @( Get-ChildItem -Path $PSScriptRoot\Lib\*.dll -ErrorAction SilentlyContinue -Recurse )
@@ -19,7 +19,7 @@ Foreach ($import in @($Assembly)) {
     }
 }
 
-Export-ModuleMember -function 'Write-Color', 'Write-ColorDev' # -Alias 'wc'
+Export-ModuleMember -function 'SuperLine', 'Write-ColorDev' # -Alias 'sl'
 
 [string] $ManifestFile = '{0}.psd1' -f (Get-Item $PSCommandPath).BaseName;
 $ManifestPathAndFile = Join-Path -Path $PSScriptRoot -ChildPath $ManifestFile;
