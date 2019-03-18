@@ -1,7 +1,8 @@
-function Write-Color {
+function SuperLine {
     <#
 	.SYNOPSIS
-        Write-Color is a wrapper around Write-Host.
+        Originally called Write-Color.
+	SuperLine is a wrapper around Write-Host.
 
         It provides:
         - Easy manipulation of colors,
@@ -10,7 +11,8 @@ function Write-Color {
 
 	.DESCRIPTION
         Author: przemyslaw.klys at evotec.pl
-        Project website: https://evotec.xyz/hub/scripts/write-color-ps1/
+        Current Fork Author: Ben Therien (btherien at cultureofprocess.com)
+	Project website: https://evotec.xyz/hub/scripts/write-color-ps1/
         Project support: https://github.com/EvotecIT/PSWriteColor
 
         Original idea: Josh (https://stackoverflow.com/users/81769/josh)
@@ -90,6 +92,7 @@ function Write-Color {
         - TimeFormat https://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx
     #>
     [alias('Write-Colour')]
+    [alias('Write-Color')]
     [CmdletBinding()]
     param (
         [alias ('T')] [String[]]$Text,
